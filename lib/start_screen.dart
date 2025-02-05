@@ -6,7 +6,15 @@ class StartScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return MaterialApp(
+        home: Scaffold(
+            body: Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          colors: [Colors.purple, Colors.deepPurple],
+        ),
+      ),
+      child:     Center(
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -37,10 +45,13 @@ class StartScreen extends StatelessWidget {
             label: const Text(
               'Start Quiz',
               style: TextStyle(color: Colors.white),
-            ),
-          ),
-        ],
-      ),
-    );
+                ),
+              ),
+             ],
+           ),
+        ),
+      )
+    )
+  );
   }
 }
